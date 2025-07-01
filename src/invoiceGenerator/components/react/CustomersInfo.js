@@ -62,7 +62,7 @@ function CustomersInfo() {
                     <hr/>
                     <h2>Bill Details</h2>
                     <label for="subTotal" className='subTotal'>Sub Total</label>
-                    <input readOnly className='subTotal' value={itemsTotal} />
+                    <input readOnly className='subTotalip' value={itemsTotal} />
                     <label className="taxes" for="Taxes">Taxes(if any)</label>
                     <input ref={taxref} className="taxesip" type="number"  max={100} defaultValue={0} onChange={(event)=>{
                         setTaxes(event.target.value);
@@ -81,12 +81,11 @@ function CustomersInfo() {
                         handleAmountToBePaid();
                     }}/>
                     <label className='amounttobepaid'>Amount to be paid</label>
-                    <input  className='amounttobepaid' readOnly value={amountToBePaid} />
+                    <input  className='amounttobepaidip' readOnly value={amountToBePaid} />
                     <button className='proceedfromcustomerinfo'>Proceed</button>
                 </form>
             </div>
         </div>
     )
-
 }
 export default CustomersInfo;

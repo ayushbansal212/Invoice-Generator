@@ -22,7 +22,7 @@ function Invoice() {
           <h1 className="invoice-title">INVOICE</h1>
         </div>
 
-        <div className="header">
+        <div className="invoiceheader">
           <div className="logo-container">
             <img
               src="https://ph-files.imgix.net/01244d87-4aae-43b3-859b-994bbd1246a2.jpeg?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=373&h=210&fit=max&frame=1"
@@ -78,15 +78,15 @@ function Invoice() {
         <hr className="longboldhr"></hr>
 
         <div className="amountdetails">
-          <p className="boldtext">Sub-Total: <span className="lighttext">{itemsTotal}</span></p>
+          <p className="boldtext">Sub-Total: <span className="lighttext">{(itemsTotal).toFixed(2)}</span></p>
           <hr className="shorthr"></hr>
-          <p className="boldtext">Taxes: <span className="lighttext">{taxesAmount}</span></p>
+          <p className="boldtext">Taxes: <span className="lighttext">{taxesAmount.toFixed(2)}</span></p>
           <hr className="shorthr"></hr>
-          <p className="boldtext">Total Amount: <span className="lighttext">{(itemsTotal + taxesAmount)}</span></p>
+          <p className="boldtext">Total Amount: <span className="lighttext">{(itemsTotal + taxesAmount).toFixed(2)}</span></p>
           <hr className="shorthr"></hr>
-          <p className="boldtext">Discount: <span className="lighttext">{discountAmount}</span></p>
+          <p className="boldtext">Discount: <span className="lighttext">{discountAmount.toFixed(2)}</span></p>
           <hr className="shortpurpleboldhr"></hr>
-          <h3 className="amountpayable">Amount Payable: <span>{amountToBePaid}</span></h3>
+          <h3 className="amountpayable">Amount Payable: <span>{amountToBePaid.toFixed(2)}</span></h3>
           <hr className="shortpurpleboldhr"></hr>
         </div>
       </div>

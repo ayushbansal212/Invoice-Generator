@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 }
 .invoicepdflink{
     text-decoration: none;
@@ -48,11 +47,11 @@
     align-self: center;
     color: purple;
 }
-.header{
+.invoiceheader{
     display: flex;
     height: fit-content;
     margin: 5px,0px;
-    gap: 10px;
+    gap: 10vw;
     justify-content: space-between;
     
     margin: 2vh;

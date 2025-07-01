@@ -35,12 +35,12 @@
     border:none;
     border-radius: 8px;
 }
-.customername,.customernameip,.customercontact,.customercontactip,.discountip,.taxesip,.amounttobepaid,.subTotal{
+.customername,.customernameip,.customercontact,.customercontactip,.discountip,.taxesip,.amounttobepaid,.subTotal,.amounttobepaidip,.subTotalip{
     border-radius: 4px;
     padding: 4px;
     font-weight: 600;
     font-size: 1.3rem;
 }
-.customercontactip,.customernameip{
+.customercontactip,.customernameip,.discountip,.taxesip,.amounttobepaidip,.subTotalip{
     border: 0.5px solid black;
 }
