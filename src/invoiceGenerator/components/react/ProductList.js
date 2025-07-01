@@ -28,7 +28,7 @@ function Card() {
             </div>
                 <table className="carttable">
                     <tr className='tablerow'>
-                        <th className="tableheading">SR No.</th>
+                        <th className="tableheading">Sr.</th>
                         <th className="tableheading">Product</th>
                         <th className="tableheading">Units</th>
                         <th className="tableheading">Price</th>

@@ -5,7 +5,7 @@ export const InvoiceGeneratorContext = createContext();
 export default function InvoiceGeneratorContextProvider({children}) {
     const [isloggedin,setLoggedIn]=useState(false);
     const [userProfileVisibilty,setUserProfileVisibilty]=useState(false);
-    const [allItems,setAllItems]=useState([]);
+    const [allItems,setAllItems]=useState([{name:"dd",nd:"djd",bbdj:"djd",jkdkd:"djdk",jdk:"dkd"}]);
     const[customerName,setCustomerName]=useState("");
     const [itemsTotal, setItemsTotal] = useState(0);
     const[invoiceId,setInvoiceId]=useState();

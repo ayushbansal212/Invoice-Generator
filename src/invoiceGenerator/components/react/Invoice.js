@@ -53,7 +53,7 @@ function Invoice() {
 
         <hr className="longboldhr"></hr>
 
-        <table className="table">
+        <table className="invoicetable">
           <thead className="tablehead">
             <tr className="tableheader tablerow">
               <th className="tableheader">SR No.</th>
