@@ -46,8 +46,8 @@ function CustomersInfo() {
 
     return (
         <div className="customerwrapper">
-            <div className='main'>
-                <h2>Customer's Deatails</h2>
+            <div className='cutomerinfomain'>
+                <h2 style={{textAlign:"center"}}>Customer's Details</h2>
                 <form onSubmit={handleSubmit} className='customerdetails'>
                     <label className="customername" for="customerName">Name</label>
                     <input className="customernameip" type="text" id="customerName" name="customerName" onChange={(event) => {

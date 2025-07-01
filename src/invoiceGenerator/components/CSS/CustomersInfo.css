@@ -3,11 +3,13 @@
     justify-content: center;
     height: fit-content;
 }
-.main{
+.cutomerinfomain{
     flex: 1;
+    border: 2px solid white;
+    border-radius: 8px;
     box-shadow: 2px 2px 15px rgb(215, 212, 212);
     display: flex;
-    max-width:max(450px,35vw);
+    max-width:min(450px,90%);
     align-content: center;
     justify-content: space-evenly;
     padding: 10px;
