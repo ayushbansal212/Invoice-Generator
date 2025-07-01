@@ -1,0 +1,44 @@
+.customerwrapper{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.main{
+    flex: 1;
+    box-shadow: 2px 2px 15px rgb(215, 212, 212);
+    display: flex;
+    max-width:max(450px,35vw);
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    flex-direction: column;
+    max-height: fit-content;
+    margin-top: 1vh;
+}
+.customerdetails{
+    display: flex;
+    padding: 8px;
+    gap: 10px;
+    flex-direction: column;
+}
+.proceedfromcustomerinfo:hover{
+    transform: scale(1.02);
+    transition: all 0.3s;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.proceedfromcustomerinfo{
+    height: fit-content;
+    padding: 3px;
+    border:none;
+    border-radius: 8px;
+}
+.customername,.customernameip,.customercontact,.customercontactip,.discountip,.taxesip,.amounttobepaid,.subTotal{
+    border-radius: 4px;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.customercontactip,.customernameip{
+    border: 0.5px solid black;
+}

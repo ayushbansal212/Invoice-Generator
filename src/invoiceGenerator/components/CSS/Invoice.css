@@ -1,0 +1,151 @@
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    gap: 10px;
+    
+}
+.companydetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.invoicepdflink{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 2px solid rgb(95, 95, 95);
+    padding: 4px;
+    border-radius: 8px;
+
+}
+.invoicepdflink:hover{
+    transform: scale(1.02);
+    transition: all 0.2s;
+    text-decoration: underline;
+}
+.contactmain{
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    width: min(600px,95%);
+    display: flex;
+    align-self: "center";
+    align-items: center;
+    flex-direction: column;
+    min-height: 85vh;
+    height: fit-content;
+    box-shadow: 2px 2px 5px black;
+    margin: 20px;
+}
+
+.invoice-title{
+    align-self: center;
+    color: purple;
+}
+.header{
+    display: flex;
+    height: fit-content;
+    margin: 5px,0px;
+    gap: 10px;
+    justify-content: space-between;
+    
+    margin: 2vh;
+    width: 95%;
+}
+
+.logo-container{
+    width: 40%;
+    height: 100%;
+}
+.image{
+    width:100%;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+}
+.centre{
+    gap: 10px;
+    display: flex;
+    height: fit-content;
+    margin: 5px ,0px;
+    justify-content: space-between;
+    margin: 2vh;
+    width: 95%;
+}
+.table{
+    width: 95%;
+    background-color: white;
+    padding: 0px;
+}
+.tabledata{
+    background-color: white;
+}
+.invoicetablerow{
+    background-color: white;
+}
+.tableheader{
+    background-color: rgb(207, 201, 201);
+    color: purple;
+}
+.tablehead{
+    color: purple;
+    border-radius: 4px;
+
+}
+.amountdetails{
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+    align-items: flex-end;
+    width: 95%;
+}
+.invoiceheading{
+    color: purple;
+}
+.boldtext{
+    font-weight: 650;
+}
+.lighttext{
+    font-weight: 540;
+}
+.shorthr{
+    text-align: end;
+    width: 20%;
+    border: none;
+    height: 1.8px;
+    background-color: #cfcece;
+    margin: 4px;
+}
+.shortpurpleboldhr{
+    text-align: end;
+    width: 30%;
+    border: none;
+    height: 2px;
+    margin: 4px;
+    background-color: purple;
+}
+.longboldhr{
+    text-align: center;
+    width: 95%;
+    border: none;
+    height: 4px;
+    margin: 2vh;
+    background-color: purple;
+}
+.longlightline{
+    text-align: end;
+    width: 90%;
+    border: none;
+    height: 1.8px;
+    background-color: #cfcece;
+    margin: 4px;
+}
+.amountpayable{
+    color: purple;
+}
+

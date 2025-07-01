@@ -1,0 +1,22 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+}
+body.light{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+   color: black;
+}
+
+body.dark{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: rgb(4, 4, 70);
+    color: rgb(244, 241, 241);
+
+}

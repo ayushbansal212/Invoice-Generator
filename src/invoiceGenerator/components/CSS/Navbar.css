@@ -1,0 +1,81 @@
+html,body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.active{
+    text-decoration: underline;
+    background-color:rgb(238, 213, 103) ;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: large;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.navbar{
+    position: sticky;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    top: 0px;
+    gap: 1vw;
+    z-index: 100;
+    height: fit-content;
+    padding: 10px;
+}
+.logoutbutton{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.logoutbutton:hover,.themebutton:hover{
+    cursor: pointer;
+}
+
+.logo_image{
+    max-width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    
+}
+.navbar> *{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:20px ;
+
+}
+.nav_main{
+    width: 100%;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+.navbard{
+    background-color: rgb(0,0,16);
+    color: white;
+    box-shadow: 1px 1px 20px white;
+}
+.navbarl{
+    background-color: rgb(0, 0, 0);
+    color: black;
+    box-shadow: 2px 2px 20px rgb(148, 144, 144);
+}
+.themebutton{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

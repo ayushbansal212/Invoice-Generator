@@ -1,0 +1,78 @@
+.emptylist{
+    height: fit-content;
+    background-color: rgb(11, 11, 90);
+}
+.mainItemData{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 20px;
+    min-height:fit-content ;
+}
+
+.carttable{
+    width: min(700px , 90%);
+    height: fit-content;
+    background-color: rgb(171, 189, 33);
+    border: 2px solid rgb(19, 50, 61);
+    border:2px solid black;
+}
+.tableheading {
+    background-color: rgb(183, 45, 45);
+    color: white;
+    margin: 0px;
+    padding: 1vh;
+    
+}
+td{
+    background-color: rgb(205, 232, 142);
+    color: rgb(18, 10, 10);
+    margin: 0px;
+    text-align: center;
+    font-weight: 800;
+    padding: 1vh;
+}
+
+#totalprice{
+    font-weight: 900;
+    font-size: larger;
+}
+.removeButton{
+    border: none;
+    cursor: pointer;
+    background-color:rgb(205, 232, 142) ;
+    color: rgb(252, 0, 0);
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    height: 100%;
+    border-radius: 1px ;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+.cardButtons{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30vw;
+}
+
+.removeButton:hover,.calcbutton:hover,.generateinvoicebutton:hover{
+    transform: scale(1.02);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.calcbutton,.generateinvoicebutton{
+    border: none;
+    min-width: fit-content;
+    border-radius: 1vmin;
+    color: black;
+    background-color: rgb(235, 231, 16);
+    height: fit-content;
+    padding: 4px;
+    font-weight: 900;
+}
+th,td,tr,table{
+    border-radius: 2px;
+}
