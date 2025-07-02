@@ -67,7 +67,7 @@ function Invoice() {
             {allItems.map((item, index) => (
               <tr className="invoicetablerow" key={index}>
                 {Object.keys(item).map((key, i) => (
-                  <td className="tabledata" >{item[key]}</td>
+                  <td className="tabledata">{item[key]}</td>
                 ))}
 
               </tr>

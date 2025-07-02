@@ -30,10 +30,11 @@ function CustomersInfo() {
     function generateInvoiceId() {
         let arr=[uchar,lchar,num];
         let newinvoiceId="#OD";
-        for(let i=0;i<10;i++){
+        for(let i=0;i<4;i++){
             let idx = Math.floor(Math.random() * arr.length);
             newinvoiceId+=arr[idx]();
         }
+        newinvoiceId+=Date.now().toString(36) + '-' + Math.random().toString(36).substring(2);
         setInvoiceId(newinvoiceId);
     }
     function handleSubmit(e) {
@@ -81,7 +82,7 @@ function CustomersInfo() {
                         handleAmountToBePaid();
                     }}/>
                     <label className='amounttobepaid'>Amount to be paid</label>
-                    <input  className='amounttobepaidip' readOnly value={amountToBePaid} />
+                    <input  className='amounttobepaidip' readOnly value={amountToBePaid.toFixed(2)} />
                     <button className='proceedfromcustomerinfo'>Proceed</button>
                 </form>
             </div>
