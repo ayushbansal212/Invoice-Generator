@@ -107,7 +107,8 @@ function Signup() {
                     </div>
                     <div className="alreadysignedin">
                         
-                        Already have an account? <NavLink className="alreadysignedin" to="/login">Log In</NavLink>
+                        Already have an account? <br></br>
+                        <NavLink className="alreadysignedinlink" to="/login">Log In</NavLink>
                         
                     </div>
 

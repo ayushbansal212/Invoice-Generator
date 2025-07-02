@@ -196,10 +196,9 @@ sup{
     }
 }
 .alreadysignedin,.alreadysignedinlink{
-    color: rgb(255, 255, 255);
+    color: rgb(161, 161, 0);
     text-align: center;
-    margin: 8px;
+    margin-top: 8px;
 }
-
 
 
