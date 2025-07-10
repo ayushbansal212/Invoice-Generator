@@ -14,7 +14,7 @@ function About(){
         className='aboutmain'
       >
         <h1>
-          Welcome to <span style={{ color: "#4CAF50", height:"100vh" }}>InvoicePro</span>, your
+          Welcome to <span style={{ color: "rgb(240, 240, 18)", height:"100vh" }}>InvoicePro</span>, your
           smart and simple solution for generating professional invoices online!
         </h1><br/>
   
