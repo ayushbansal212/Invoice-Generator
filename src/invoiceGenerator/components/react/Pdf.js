@@ -124,7 +124,7 @@ function Pdf({ itemsTotal, allItems, customerName, customerContact, amountToBePa
           </View>
           <View style={styles.date}>
             <Text style={styles.heading}>Invoice Details</Text>
-            <Text style={styles.boldtext}>Invoice id: <Text style={styles.boldtext}>{invoiceId}</Text></Text>
+            <Text style={styles.boldtext}>Invoice id: <Text style={styles.lighttext}>{invoiceId}</Text></Text>
             <Text style={styles.boldtext}>Issued: <Text style={styles.lighttext}>{new Date().toLocaleString()}</Text></Text>
 
           </View>

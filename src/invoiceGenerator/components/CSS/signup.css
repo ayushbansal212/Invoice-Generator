@@ -22,18 +22,17 @@ sup{
     flex-direction: column;
 }
 .sright{
-    width: max(600px,30vw);
+    margin-top: 30px;
+    width: max(400px,30vw);
     max-height: 40%;
-    margin-top: 8vh;
-    padding: 0px;
+    
 
 }
 .sright >img{
     width: 100%;
-    /* aspect-ratio: 1/1; */
     height: fit-content;
     border-radius: 10px; 
-    box-shadow: 2px 2px 20px rgb(162, 167, 170);
+    box-shadow: 2px 2px 15px rgb(162, 167, 170);
 }
 .sright >img:hover{
    
@@ -113,7 +112,6 @@ sup{
         display: flex;
         align-items: flex-start;
         gap: 20px;
-        /* flex-direction: column; */
         flex-direction: column;
         flex-wrap: wrap;
         
@@ -160,8 +158,9 @@ sup{
         height: fit-content;
     }
     .sright{
-        width: auto;
-        margin-top:10px ;
+        width: max(450px,80%);
+        margin:40px ;
+        align-self: center;
     }
 
 }
@@ -192,7 +191,6 @@ sup{
 @media  (max-width:300px){
     .sright{
         display: none;
-
     }
 }
 .alreadysignedin,.alreadysignedinlink{

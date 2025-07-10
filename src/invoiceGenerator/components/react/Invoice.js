@@ -15,7 +15,7 @@ function Invoice() {
     <div className="wrapper">
         
       <NavLink className="invoicepdflink" to="/invoicepdf">
-        Download PDF
+        View PDF
       </NavLink>
       <div className="contactmain">
         <div className="invoice-title">

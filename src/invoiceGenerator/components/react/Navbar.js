@@ -21,7 +21,6 @@ function Navbar({users}) {
     return(
     <div className="nav_main"> 
        <div className={isdarktheme?"navbard navbar":"navbarl navbar"} >
-        
             <Link to={isloggedin?"/home":"/login"}><img src={logo} alt="" className="logo_image"/></Link>
             <NavLink to="/home">Home</NavLink>
             <NavLink to="/contact">Contact</NavLink>

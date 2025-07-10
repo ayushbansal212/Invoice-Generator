@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import '../CSS/signup.css'
 import { toast } from 'react-toastify';
-import invoiceImage from '../images/invoice.webp';
+import invoiceImage from '../images/invoice.png';
 function Signup() {
     const navigate = useNavigate();
     console.log("Rendering ComponentName signup")
@@ -55,7 +55,9 @@ function Signup() {
     }
     return (
         <div className='ssignupform'>
-            
+            <div className="login_heading">
+                    <h2 className="loginHeading">Sign Up</h2>
+                </div>
             <div className="sleft">
                 <div className="sheading">
                     <h2 >
