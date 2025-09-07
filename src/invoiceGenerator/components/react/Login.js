@@ -1,5 +1,5 @@
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import '../CSS/Login.css';
 import invoiceImage from '../images/invoice.png';
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { InvoiceGeneratorContext } from "./Context.js";
 function Login() {
     console.log("Rendering ComponentName login")
     const { setLoggedIn } = useContext(InvoiceGeneratorContext)
-    const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
+    const [loginDetails, setLoginDetails] = useState({ username: "", password: "" });
     const [passwordvisibility, setPasswordVisibility] = useState(false);
     const dashboardNavigation = useNavigate();
     function handleChange(event) {
@@ -20,6 +20,41 @@ function Login() {
             }
         });
     }
+    function homePage(){
+        toast.success("Successfully logged in");
+                            setLoggedIn(true);
+                            dashboardNavigation("/home");
+    }
+    function wrongCredentials(){
+        toast.error("Wrong Credentials");
+
+    }
+    function handleSubmit(event){ 
+        event.preventDefault();
+        const url="http://localhost:8080/api/login"; 
+        const options={ 
+            method:"POST",
+            headers:{ "Content-Type":"application/json" },
+            body:JSON.stringify(loginDetails) 
+        } 
+        fetch(url,options)
+        .then(response => {
+            if (!response.ok) {
+              wrongCredentials();
+              throw new Error(`Error: ${response.status}`);
+            }
+            return response.json(); 
+          })
+          .then(() => {
+            homePage()
+          })
+          .catch(error => {
+            console.error("Login failed:", error.message);
+          });
+        }
+        function handleClick(){
+            window.location.href = "http://localhost:8080/oauth2/authorization/github"
+        }
     return (
         <div className="loginwrapper">
             <div className="login_main">
@@ -38,13 +73,9 @@ function Login() {
                         </p><br />
                     </div>
                     <div className="loginform">
-                        <form action={() => {
-                            toast.success("Successfully logged in");
-                            setLoggedIn(true);
-                            dashboardNavigation("/home");
-                        }} className='account_login'>
-                            <label htmlFor="email" className='emaill'>Email Address</label>
-                            <input type="email" className='emailip' placeholder="Enter your email" value={loginDetails.email} name="email" id="email" required onChange={handleChange} />
+                        <form onSubmit={handleSubmit} className='account_login'>
+                            <label htmlFor="email" className='emaill'>Username Or Email</label>
+                            <input type="text" className='emailip' placeholder="Enter your username or Email*" value={loginDetails.username} name="username" id="email" required onChange={handleChange} />
                             <label className="passwordl" htmlFor="password" >Password</label>
                             <div className="passwordInput">
                                 <input className="passwordip" type={passwordvisibility ? "text" : "password"} placeholder="Enter password" id="password" value={loginDetails.password} name="password" required onChange={handleChange} />
@@ -64,8 +95,8 @@ function Login() {
                         <span >OR</span>
                     </div>
                     <div>
-                        <button className="googlesignin">
-                            Sign in With Google
+                        <button className="githubsignin" onClick={handleClick}>
+                            Sign in With GitHub
                         </button>
                     </div>
                     <div className="createNewAccount">

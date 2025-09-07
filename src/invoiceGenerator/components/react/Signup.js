@@ -6,7 +6,7 @@ import invoiceImage from '../images/invoice.png';
 function Signup() {
     const navigate = useNavigate();
     console.log("Rendering ComponentName signup")
-    const [newAccountDetails, setNewAccountDetails] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
+    const [newAccountDetails, setNewAccountDetails] = useState({ username: "", name: "", email: "", password: "", confirmPassword: "" });
     function handleChange(event) {
         setNewAccountDetails(prev => {
             return {
@@ -46,12 +46,50 @@ function Signup() {
     function checkFormValidity() {
         if (newAccountDetails.password !== newAccountDetails.confirmPassword) {
             toast.error("Password & Confirm Pasword must be same");
-            
+            return false;
+
         }
-        else {
-            toast.success("Account created Successfully");
-            navigate("/login");
+        return true;
+
+        
+    }
+    
+    function saveUser(){
+        console.log(newAccountDetails);
+        const url="http://localhost:8080/api/signup/new";
+        let isSuccess=false;
+        const options={
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(newAccountDetails)
         }
+        if(!checkFormValidity()){
+            return;
+        }
+        fetch(url, options)
+        .then( response => {
+            const data = response.json();
+            if (!response.ok) {
+                const errorMessage = data?.error || "Something went wrong";
+                toast.error("Username or email already registered");
+                throw new Error(errorMessage); // still throw to stop further .then()
+            }
+            else{
+                toast.success("Account created successfully")
+                navigate("/login")
+            }
+            return data;
+        })
+        .catch(error => {
+            console.error("Error:", error.message);
+        })
+    }
+    function handleSubmit(e){
+        saveUser();
+        e.preventDefault();
+        
     }
     return (
         <div className='ssignupform'>
@@ -72,19 +110,17 @@ function Signup() {
 
                 </div>
                 <div >
-                    <form className="ssignupformdetails" action={()=>
-                        checkFormValidity()
-                    }>
+                    <form className="ssignupformdetails" onSubmit={handleSubmit}>
                         <div className="snamel">
-                            <label htmlFor="sfirstName">First Name <sup>*</sup></label>
-                            <label htmlFor="slastName">Last Name<sup>*</sup></label>
+                            <label htmlFor="susername">Username<sup>*</sup></label>
+                            <label htmlFor="sname">Name<sup>*</sup></label>
                         </div>
                         <div className="snameipb">
-                            <input type="text" className="snameip" placeholder="Enter your first name*" name="firstName" id="firstName" onChange={handleChange} required />
-                            <input type="text" className="snameip" placeholder="Enter your last name*" name="lastName" id="lastName" onChange={handleChange} required />
+                            <input type="text" className="susernameip" placeholder="Enter your username*" name="username" id="susername" onChange={handleChange} required />
+                            <input type="text" className="snameip" placeholder="Enter your name*" name="name" id="name" onChange={handleChange} required />
                         </div>
                         <label htmlFor="email" className="semaill">Email Address<sup>*</sup></label>
-                        <input type="email" placeholder="Enter your email *" className="semailip" name="email" id="email" required />
+                        <input type="email" placeholder="Enter your email *" className="semailip" name="email" id="email" onChange={handleChange} required />
                         <div className="spasswordl">
                             <label htmlFor="password">Password<sup>*</sup></label>
                             <label htmlFor="confirmPassword">Confirm Password<sup>*</sup></label>
@@ -99,14 +135,14 @@ function Signup() {
                         }}>Auto Password</button></span>
                         <button type="submit" className="ssubmit">Create Account</button>
                     </form>
-                    <div className="or">
+                    {/* <div className="or">
                         <span >OR</span>
                     </div>
                     <div>
                         <button className="sgooglesignin">
                             Sign up With Google
                         </button>
-                    </div>
+                    </div> */}
                     <div className="alreadysignedin">
                         
                         Already have an account? <br></br>

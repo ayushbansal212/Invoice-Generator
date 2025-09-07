@@ -120,7 +120,7 @@ input{
     text-align: end;
     cursor: pointer;
 }
-.signin ,.googlesignin{
+.signin ,.githubsignin{
     width: 100%;
     height: max(4vh,fit-content);
     margin: 2vh 0px;
@@ -132,7 +132,7 @@ input{
     font-size: 1.1em;
     cursor: pointer;
 }
-.signin:hover ,.googlesignin:hover,.createNewAccount:hover,.forgotpasswordbutton:hover,.passwordshowbutton:hover{
+.signin:hover ,.githubsignin:hover,.createNewAccount:hover,.forgotpasswordbutton:hover,.passwordshowbutton:hover{
     transform: scale(1.02);
     transition: all 0.3s;
     text-decoration: underline;

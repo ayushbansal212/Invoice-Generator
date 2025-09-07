@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../CSS/Contact.css";
 import { InvoiceGeneratorContext } from "./Context.js";
+import { toast } from "react-toastify";
 
 export default function Contact({ onSubmit }) {
   const{isdarktheme}=useContext(InvoiceGeneratorContext)
@@ -12,12 +13,16 @@ export default function Contact({ onSubmit }) {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContact((prev) => ({ ...prev, [name]: value }));
+    let { name, value } = e.target;
+    setContact((prev) => ({
+       ...prev, 
+      [name]:value
+     }));
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
+    toast.success("Message successfully sent")
     if (onSubmit) onSubmit(contact);
   };
 
@@ -61,9 +66,10 @@ export default function Contact({ onSubmit }) {
         <label>
           Message:
           <textarea
-            name="address"
+            name="message"
             value={contact.message}
             onChange={handleChange}
+            required
           />
         </label>
         <button type="submit">Send</button>

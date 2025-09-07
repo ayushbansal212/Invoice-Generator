@@ -15,7 +15,6 @@ function InvoicePdf() {
     console.log(customerName, customerContact);
     return (
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px", width: "100%", height: "100vh" }}>
-            
             <PDFViewer style={{ maxWidth:"90%",aspectRatio:"3/4", height: "95%", display: "flex", justifyContent: "center" }}>
                 <Pdf invoiceId={invoiceId} taxesAmount={taxesAmount} discountAmount={discountAmount} itemsTotal={itemsTotal} allItems={allItems} customerName={customerName} customerContact={customerContact} amountToBePaid={amountToBePaid}></Pdf>
             </PDFViewer>
@@ -35,7 +34,6 @@ function InvoicePdf() {
                 </button>
 
             </PDFDownloadLink>
-
         </div>
     )
 }
